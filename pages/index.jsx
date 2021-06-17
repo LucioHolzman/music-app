@@ -29,13 +29,13 @@ export default function Home() {
 
       <main className={`${styles.main}`}>
 
-        <div className="container h-full w-full flex">
-          <div className="container w-5/12 h-full">
+        <div className="h-screen w-full flex">
+          <div className="container w-2/12 h-full">
 
             <div className="flex justify-center items-center container h-20">
               <input className="bg-transparent w-full outline-none text-white p-1 border-b" placeholder="Search music" type="text" />
             </div>
-            <div className="container h-full">
+            <div className="container">
               <nav>
                 <ul className="text-white font-light flex-col space-y-4 pr-4 pl-4">
                   <li className="flex">
@@ -87,7 +87,7 @@ export default function Home() {
               </nav>
             </div>
           </div>
-          <div className="container  w-9/12 h-full">
+          <div className="container  w-10/12 h-full">
             <div className="w-full bg-red-500">
 
             </div>

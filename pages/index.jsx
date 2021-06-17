@@ -35,7 +35,7 @@ export default function Home() {
             <div className="flex justify-center items-center container h-20">
               <input className="bg-transparent w-full outline-none text-white p-1 border-b" placeholder="Search music" type="text" />
             </div>
-            <div className="container">
+            <div className="container border-r">
               <nav>
                 <ul className="text-white font-light flex-col space-y-4 pr-4 pl-4">
                   <li className="flex">
@@ -87,11 +87,11 @@ export default function Home() {
               </nav>
             </div>
           </div>
-          <div className="container  w-10/12 h-full">
+          <div className="container w-10/12 h-3/6">
             <div className="w-full bg-red-500">
 
             </div>
-            <div className="container space-y-8 pl-24 pt-24">
+            <div className="container space-y-8 pl-4">
               <div className="w-full relative overflow-hidden">
                 <div className="container text-white top-10 absolute font-light text-2xl mb-2">
                   <h1>Featured</h1>
@@ -109,7 +109,7 @@ export default function Home() {
                   }
                 </div>
               </div>
-              <div className="w-full overflow-hidden">
+              <div className="w-full overflow-hidden h-2/6">
                 <div className="container text-white font-light text-2xl mb-2">
                   <h1>Popular</h1>
                 </div>

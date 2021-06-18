@@ -28,14 +28,15 @@ export default function Home() {
       </Head>
 
       <main className={`${styles.main}`}>
-
         <div className="h-screen w-full flex">
           <div className="container w-2/12 h-full">
-
-            <div className="flex justify-center items-center container h-20">
-              <input className="bg-transparent w-full outline-none text-white p-1 border-b" placeholder="Search music" type="text" />
+            <div className="text-xs shadow my-9 flex justify-center">
+              <input className="max-w-md border-b bg-transparent p-1 truncate ..."  type="text" placeholder="Try 'Kendrick Lamar'" />
+              <button className="bg-indigo-700 hover:bg-indigo-600 rounded text-white p-2 pl-4 pr-4">
+                <p className="font-semibold">Search</p>
+              </button>
             </div>
-            <div className="container border-r">
+            <div className="container min-w-max border-r">
               <nav>
                 <ul className="text-white font-light flex-col space-y-4 pr-4 pl-4">
                   <li className="flex">
@@ -89,7 +90,6 @@ export default function Home() {
           </div>
           <div className="container w-10/12 h-3/6">
             <div className="w-full bg-red-500">
-
             </div>
             <div className="container space-y-8 pl-4">
               <div className="w-full relative overflow-hidden">

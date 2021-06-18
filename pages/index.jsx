@@ -31,7 +31,7 @@ export default function Home() {
         <div className="h-screen w-full flex">
           <div className="container w-2/12 h-full">
             <div className="text-xs shadow my-9 flex justify-center">
-              <input className="max-w-md border-b bg-transparent p-1 truncate ..."  type="text" placeholder="Try 'Kendrick Lamar'" />
+              <input className="max-w-md border-b bg-transparent p-1 text-white mr-4 outline-none truncate ..."  type="text" placeholder="Try 'Kendrick Lamar'" />
               <button className="bg-indigo-700 hover:bg-indigo-600 rounded text-white p-2 pl-4 pr-4">
                 <p className="font-semibold">Search</p>
               </button>

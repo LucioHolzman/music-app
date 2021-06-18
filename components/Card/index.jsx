@@ -13,7 +13,7 @@ export default function Card({imageURL, authorName = 'Undefined', albumName = 'U
     
     return(
         <>
-        <div onClick={handleClick} className={`flex ${playList === true ? '': 'overflow-hidden' } min-w-max h-72 shadow-lg p-4 relative bg-gradient-to-t from-${colorBg}-700 via-${colorBg}-400 to-${colorBg}-200`}>
+        <div onClick={handleClick} className={`flex ${playList === true ? '': 'overflow-hidden' } rounded min-w-max h-72 shadow-lg p-4 relative bg-gradient-to-t from-${colorBg}-700 via-${colorBg}-400 to-${colorBg}-200`}>
             <div className={`relative bottom-0 w-96 mr-24 h-full`}>
                 <ImageContainer
                     selectPlayList={playList}

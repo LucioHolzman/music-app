@@ -5,8 +5,8 @@ export default function DiskCard({albumName = 'Undefined',authorName = 'Undefine
 
     return(
         <>
-        <div className="container">
-                <div className="relative w-60 h-60 ">        
+        <div className="container rounded">
+                <div className="relative w-60 h-60 rounded">        
                     <ImageContainer
                         imageURL={imageURL}
                         authorName={authorName}

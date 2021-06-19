@@ -18,6 +18,16 @@ import DiskCard from '../components/DiskCard'
 
 export default function Home() {
 
+  let totalDistance = 0;
+  const handleTranslate = (e) => {
+    let spanTranslate = document.querySelector('#spanTranslate');
+    let distance = e.target.getBoundingClientRect().top;
+    let distanceSpan = spanTranslate.getBoundingClientRect().bottom;
+    totalDistance = ((distance - totalDistance) - 167);
+    spanTranslate.style.transform = `translateY(${totalDistance}px)`;
+    spanTranslate.style.top = `6px`;
+  }
+ 
 
   return (
     <div className={styles.container}>
@@ -27,7 +37,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main}`}>
-        <div className="h-full h-screen min-h-screen w-full flex">
+        <div className="h-screen min-h-screen w-full flex">
           <div className="container w-2/12 h-full min-h-screen">
             <div className="min-w-30 h-full">
               <div className="container flex flex-col justify-start pt-10 h-1/6">
@@ -38,11 +48,14 @@ export default function Home() {
                   </button>
                 </div>
               </div>
-              <div className="container flex flex-col justify-start h-4/6  border-r">
+              <div className="container flex flex-col justify-start h-4/6 border-r">
                 <nav>
-                  <ul className="text-white font-light flex-col px-6">
-                    <span className={`${styles.spanSelected}`}></span>
-                    <li className="flex pb-2">
+                  <ul className="text-white font-light flex-col relative px-6">
+                    <div className="flex">
+                      <span  id="spanTranslate"  className={`${styles.spanSelected} `}></span>
+                    </div>
+                    {/* <span id="spanTranslate" className={`${styles.spanSelectedUnder}`}></span> */}
+                    <li onClick={handleTranslate} className="flex pb-2">
                       <Link href="/">
                         <a className="flex ml-4">
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-4 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -52,7 +65,7 @@ export default function Home() {
                         </a>
                       </Link>
                     </li>
-                    <li className="flex pb-2">
+                    <li onClick={handleTranslate} className="flex pb-2">
                       <Link href="/">
                         <a className="flex ml-4">
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-4 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -61,7 +74,7 @@ export default function Home() {
                           Recommendations
                         </a></Link>
                     </li>
-                    <li className="flex pb-2">
+                    <li onClick={handleTranslate} className="flex pb-2">
                       <Link href="/">
                         <a className="flex ml-4">
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-4 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -70,7 +83,7 @@ export default function Home() {
                           Top songs
                         </a></Link>
                     </li>
-                    <li className="flex pb-2">
+                    <li onClick={handleTranslate} className="flex pb-2">
                       <Link href="/">
                         <a className="flex ml-4">
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-4 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -87,9 +100,9 @@ export default function Home() {
                   <div className="flex w-11/12 h-16 rounded bg-white bg-opacity-5 text-gray-300 justify-between px-4 items-center">
                     <div className="flex items-center w-full">
                       <div className="song flex items-center w-3/6">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mr-2 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3" />
-                        </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mr-2 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z" />
+                      </svg>
                         <p className="font-light text-xs truncate ... ">You Gon` Learn(feat. Royce Da 5`9" & White Gold)</p>
                       </div>
                       <div className="flex w-3/6">

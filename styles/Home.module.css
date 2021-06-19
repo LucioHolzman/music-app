@@ -8,9 +8,23 @@
 }
 
 .spanSelected {
+  transition: all .5s ease-out;
   background-color: rgb(0, 255, 149);
   width: 1px;
-  min-height: 100%;
+  min-height: 25px;
   padding: 1px;
   box-shadow:0px 0px 10px 5px rgba(0, 255, 149, 0.3);
+  position: absolute;
+  top: 0;
+}
+
+.spanSelectedUnder {
+  transition: all 1s ease;
+  transform: translateX(0%);
+  background-color: rgb(0, 255, 149);
+  width: 85%;
+  height: 1px;
+  padding: 1px;
+  box-shadow:0px 0px 10px 5px rgba(0, 255, 149, 0.3);
+  position: absolute;
 }
